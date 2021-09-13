@@ -5,8 +5,16 @@ import json
 from rest_framework import status
 
 from . import views
-        
-class CreateHostnameTest(TestCase):
+
+class HelloWorldTest(TestCase):
+    def test_get(self):
+        response = self.client.get(
+            reverse('api_view')
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.content, b'"Hello world"')
+
+class CalculatorTest(TestCase):
         
     def test_multiply1(self):
         response = self.client.post(
@@ -71,7 +79,7 @@ class CreateHostnameTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content, b'2')
         
-    def test_addition1(self):
+    def test_addition2(self):
         response = self.client.post(
             reverse('api_view'),
             {'data':'100+1'},
@@ -97,18 +105,4 @@ class CreateHostnameTest(TestCase):
         )
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.content, b'-99')
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
