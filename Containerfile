@@ -8,7 +8,7 @@ RUN addgroup -S appuser && adduser -S appuser -G appuser
 RUN mkdir /django_backend
 WORKDIR /django_backend
 COPY * .
-RUN chown appuser:appuser /django_backend
+RUN chown -R appuser:appuser /django_backend
 
 USER appuser
 RUN pip install -r requirements.txt
