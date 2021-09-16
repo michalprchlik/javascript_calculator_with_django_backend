@@ -7,7 +7,7 @@ RUN addgroup -S appuser && adduser -S appuser -G appuser
 
 RUN mkdir /django_backend
 WORKDIR /django_backend
-COPY * .
+COPY . .
 RUN chown -R appuser:appuser /django_backend
 
 USER appuser

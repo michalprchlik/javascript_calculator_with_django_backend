@@ -4,4 +4,4 @@ run_in_container:
 	
 run_localy:
 	pip3 install -r requirements.txt
-	cd django_backend; python3 manage.py migrate; python3 manage.py test; python3 manage.py runserver
+	python3 manage.py migrate; python3 manage.py test; python3 manage.py runserver
