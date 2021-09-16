@@ -19,3 +19,18 @@ You have 2 options to run the project. Both are already prepared in `Makefile`.
 ## How to work with calculator
 
 Open `index.html` file in your browser. Use mouse to click buttons. Your actions will be displayed in upper part of screen. Upper right part of screen contains history of your calculations. 
+
+## Openshift
+
+If you want this application to be deployed openshift run below command
+
+```
+oc new-app python:3.8-ubi8~https://github.com/michalprchlik/javascript_calculator_with_django_backend.git
+```
+
+Get URL to your deployed application on openshift
+
+```
+oc expose service javascriptcalculatorwithdjangobackend
+oc get routes
+```
