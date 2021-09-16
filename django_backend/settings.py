@@ -25,7 +25,7 @@ SECRET_KEY = 'pi4_ny6%#d___+$y0b9stra43tur%f79lt#*))rdn86ic8qi$r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
